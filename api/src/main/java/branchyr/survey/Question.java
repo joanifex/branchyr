@@ -33,7 +33,7 @@ public class Question {
     }
 
     public int getSelected() {
-        return id;
+        return selected;
     }
 
     public void setSelected(int id) {
