@@ -5,15 +5,32 @@ function Loading() {
   return <p>Loading...</p>;
 }
 
+function Answer({ answer }) {
+  const { label } = answer;
+  return <p>{label}</p>;
+}
+
 function Question({ question }) {
-  return <div>question</div>;
+  const { answers, label } = question;
+  return (
+    <div>
+      <h2>{label}</h2>
+      {answers.map(answer => (
+        <Answer answer={answer} key={answer.id} />
+      ))}
+    </div>
+  );
 }
 
 function Survey({ survey }) {
   const { name, questions } = survey;
+
+  const [firstQuestion] = questions;
+
   return (
     <div>
       <h1>{name}</h1>
+      <Question question={firstQuestion} />
     </div>
   );
 }
