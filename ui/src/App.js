@@ -2,18 +2,19 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 
 function App() {
-  const [greeting, setGreeting] = useState('');
+  const [survey, setSurvey] = useState(null);
 
   useEffect(() => {
     async function fetchData() {
-      const response = await fetch('/greeting');
+      const response = await fetch('/survey/1');
       const data = await response.json();
-      setGreeting(data.content);
+      console.log(data);
+      setSurvey(data);
     }
     fetchData();
   }, []);
 
-  return <div className="App">{greeting}</div>;
+  return <div className="App">{JSON.stringify(survey)}</div>;
 }
 
 export default App;
