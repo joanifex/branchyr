@@ -3,6 +3,7 @@ package com.branchyr.survey;
 public class Answer {
     private String label;
     private int nextQuestion;
+    private int id;
 
     public Answer() {}
 
@@ -20,6 +21,14 @@ public class Answer {
 
     public void setNextQuestion(int id) {
         this.nextQuestion = id;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }
 

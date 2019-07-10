@@ -6,42 +6,51 @@
       "label": "Apples or Oranges?",
       "answers": [
         {
+          "id": 1,
           "label": "Apple",
           "nextQuestion": 2
         },
         {
+          "id": 2,
           "label": "Orange",
           "nextQuestion": 3
         }
-      ]
+      ],
+      "selected": null
     },
     {
       "id": 2,
       "label": "Pears or Plums?",
       "answers": [
         {
+          "id": 3,
           "label": "Pear",
           "nextQuestion": null
         },
         {
+          "id": 4,
           "label": "Plum",
           "nextQuestion": null
         }
-      ]
+      ],
+      "selected": null
     },
     {
       "id": 3,
       "label": "Lemons or Limes?",
       "answers": [
         {
+          "id": 5,
           "label": "Lemon",
           "nextQuestion": null
         },
         {
+          "id": 6,
           "label": "Lime",
           "nextQuestion": null
         }
-      ]
+      ],
+      "selected": null
     }
   ]
 }

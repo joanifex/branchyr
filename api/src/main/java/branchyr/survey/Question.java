@@ -4,6 +4,7 @@ public class Question {
     private String label;
     private int id;
     private Answer[] answers;
+    private int selected;
 
     public Question() {}
 
@@ -30,5 +31,14 @@ public class Question {
     public void setAnswers(Answer[] answers) {
         this.answers = answers;
     }
+
+    public int getSelected() {
+        return id;
+    }
+
+    public void setSelected(int id) {
+        this.selected = id;
+    }
+
 }
 
