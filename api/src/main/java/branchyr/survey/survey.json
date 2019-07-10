@@ -1,0 +1,47 @@
+{
+  "name": "Branching Survey",
+  "questions": [
+    {
+      "id": 1,
+      "label": "Apples or Oranges?",
+      "answers": [
+        {
+          "label": "Apple",
+          "nextQuestion": 2
+        },
+        {
+          "label": "Orange",
+          "nextQuestion": 3
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "label": "Pears or Plums?",
+      "answers": [
+        {
+          "label": "Pear",
+          "nextQuestion": null
+        },
+        {
+          "label": "Plum",
+          "nextQuestion": null
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "label": "Lemons or Limes?",
+      "answers": [
+        {
+          "label": "Lemon",
+          "nextQuestion": null
+        },
+        {
+          "label": "Lime",
+          "nextQuestion": null
+        }
+      ]
+    }
+  ]
+}

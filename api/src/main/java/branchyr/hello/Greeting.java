@@ -1,4 +1,4 @@
-package hello;
+package com.branchyr.greeting;
 
 public class Greeting {
     private final long id;
