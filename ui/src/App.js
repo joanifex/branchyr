@@ -63,7 +63,6 @@ function getNextQuestion(survey) {
       question => question.id === nextQuestionId,
     );
 
-    console.log(nextQuestion);
     currentQuestion = nextQuestion;
   }
   return currentQuestion;
@@ -73,7 +72,6 @@ function Survey({ survey, setSurvey }) {
   const { name } = survey;
 
   const question = getNextQuestion(survey);
-  // const [question] = survey.questions;
 
   function updateSurvey(updatedQuestion) {
     const updatedSurvey = {
