@@ -1,19 +1,26 @@
 package com.branchyr.survey;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-import java.io.File;
 import java.io.IOException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @RestController
+@RequestMapping("/surveys")
 public class SurveyController {
+    @Autowired
 
-    @RequestMapping("/survey/1")
-    public Survey survey() throws IOException {
-        ObjectMapper objectMapper = new ObjectMapper();
-        File file = new File("src/main/java/branchyr/survey/survey.json");
-        Survey survey = objectMapper.readValue(file, Survey.class);
+    private final SurveyRepository surveyRepository;
+
+    public SurveyController(SurveyRepository surveyRepository) {
+        this.surveyRepository = surveyRepository;
+    }
+
+    @GetMapping(path = "/{id}")
+    public @ResponseBody Survey getSurvey() throws IOException {
+        Survey survey = surveyRepository.find(1);
         return survey;
     }
 }
